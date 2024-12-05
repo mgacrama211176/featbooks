@@ -11,16 +11,16 @@ const NAVIGATION_MENU = [
   { name: "About Us", href: "/" },
   { name: "Services", href: "/" },
   { name: "Bookstore", href: "/" },
-  { name: "Testimonials", href: "/" },
+  // { name: "Testimonials", href: "/" },
   { name: "Contact Us", href: "/" },
 ] as const;
 
 // Separate user menu items into a constant
-const USER_MENU = [
-  { name: "Login/Register", href: "/", icon: User },
-  { name: "Wishlist", href: "/", icon: Heart },
-  { name: "Cart", href: "/", icon: ShoppingCart },
-] as const;
+// const USER_MENU = [
+//   { name: "Login/Register", href: "/", icon: User },
+//   { name: "Wishlist", href: "/", icon: Heart },
+//   { name: "Cart", href: "/", icon: ShoppingCart },
+// ] as const;
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,38 +30,70 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="flex flex-col font-glacial-indifference">
+    <nav className="flex flex-col font-glacial-indifference px-4  pt-8">
       <div className="flex justify-between items-center">
         {/* Logo Section */}
         <Link href="/">
           <Image
             src="/featbooks.png"
             alt="logo"
-            width={300}
-            height={300}
+            width={250}
+            height={250}
             loading="eager"
             priority
           />
         </Link>
-
         {/* Search Section */}
-        <div className="relative flex items-center gap-4">
+        {/* <div className="relative flex items-center gap-4">
           <Search className="absolute left-2 text-gray-700" />
           <input
             type="text"
             placeholder="Search Feat Books"
             className="border border-gray-300 rounded-md p-2 pl-10 w-96"
           />
+        </div> */}
+
+        <div className="flex flex-row  justify-center">
+          <div className=" lg:flex-row flex-col lg:justify-between lg:items-center lg:w-full hidden lg:block">
+            {NAVIGATION_MENU.map(({ name, href }) => (
+              <Link
+                key={name}
+                href={href}
+                className="group relative px-2 lg:px-5 pt-2 hover:text-[#edc34a] uppercase tracking-wider"
+              >
+                {name}
+                <span className="absolute bottom-[1px] left-0 w-0 h-[2px] bg-[#edc34a] transition-all duration-300 ease-out group-hover:w-16 lg:group-hover:w-full " />
+              </Link>
+            ))}
+          </div>
+
+          {/* User Menu for Mobile */}
+          {/* <div className="flex flex-col lg:hidden">
+            {USER_MENU.map(({ name, href, icon: Icon }) => (
+              <Link
+                key={name}
+                href={href}
+                className="flex items-center gap-2 px-5 py-3"
+              >
+                <Icon className="text-gray-700" />
+                {name}
+              </Link>
+            ))}
+          </div> */}
         </div>
 
         {/* User Menu Section */}
         <div className=" items-center gap-4 hidden lg:flex">
-          {USER_MENU.map(({ name, href, icon: Icon }) => (
+          {/* {USER_MENU.map(({ name, href, icon: Icon }) => (
             <Link key={name} href={href} className="flex items-center gap-2">
               <Icon className="text-gray-700" />
               {name}
             </Link>
-          ))}
+          ))} */}
+          <Link href="/login" className="flex items-center gap-2">
+            <User className="text-gray-700" />
+            Login/Register
+          </Link>
         </div>
 
         {/* Burger Icon for Mobile */}
@@ -70,10 +102,38 @@ const Navigation = () => {
         </div>
       </div>
 
-      <hr className="w-full border-gray-700" />
-
       {/* Navigation Menu */}
       <div
+        className={`lg:hidden fixed z-50 top-0 right-0 bg-[#bcbcbc69] backdrop-blur-sm w-full md:w-1/3 h-full flex flex-col pt-8 pl-4 
+          transform transition-transform duration-300 ease-in-out
+          ${isMenuOpen ? "translate-x-0" : "translate-x-full"}
+        `}
+      >
+        <span
+          className="text-2xl font-bold text-gray-700 fixed right-4 top-4 hover:cursor-pointer"
+          onClick={toggleMenu}
+        >
+          X
+        </span>
+        {NAVIGATION_MENU.map(({ name, href }) => (
+          <Link
+            key={name}
+            href={href}
+            className="group relative px-2 lg:px-5 pt-2 hover:text-[#edc34a] uppercase tracking-wider w-36 "
+          >
+            {name}
+            <span className="absolute bottom-[1px] left-0 w-0 h-[2px] bg-[#edc34a] transition-all duration-300 ease-out group-hover:w-16 lg:group-hover:w-full " />
+          </Link>
+        ))}
+
+        <div className="flex justify-start pt-6">
+          <button className="bg-[#edc34a] text-white px-4 py-2 rounded-md">
+            Login/Register
+          </button>
+        </div>
+      </div>
+
+      {/* <div
         className={`lg:flex-row lg:flex ${
           isMenuOpen
             ? "flex flex-col fixed top-0 left-0 w-full bg-white z-50"
@@ -86,36 +146,7 @@ const Navigation = () => {
         >
           <span>X</span>
         </div>
-
-        <div className="flex flex-row  justify-center  w-full">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:w-full">
-            {NAVIGATION_MENU.map(({ name, href }) => (
-              <Link
-                key={name}
-                href={href}
-                className="group relative px-5 pt-2 hover:text-[#edc34a] uppercase tracking-wider"
-              >
-                {name}
-                <span className="absolute bottom-[1px] left-0 w-0 h-[2px] bg-[#edc34a] transition-all duration-300 ease-out group-hover:w-16 lg:group-hover:w-full " />
-              </Link>
-            ))}
-          </div>
-
-          {/* User Menu for Mobile */}
-          <div className="flex flex-col lg:hidden">
-            {USER_MENU.map(({ name, href, icon: Icon }) => (
-              <Link
-                key={name}
-                href={href}
-                className="flex items-center gap-2 px-5 py-3"
-              >
-                <Icon className="text-gray-700" />
-                {name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
+      </div> */}
     </nav>
   );
 };
