@@ -13,13 +13,18 @@ const Hero = () => {
         sizes="100vw"
         className="object-cover object-top"
       />
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-30 p-4">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 font-glacial-indifference">
-          Celebrating Every Feat Sharing Every Story
-        </h1>
-        <h2 className="text-2xl md:text-3xl mb-6">
-          Conquer new heights with Feat Books!
-        </h2>
+      <div
+        className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-30 p-4"
+        id="hero-text"
+      >
+        <div className="animate-fade-in">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-glacial-indifference">
+            Celebrating Every Feat Sharing Every Story
+          </h1>
+          <h2 className="text-2xl md:text-3xl mb-6">
+            Conquer new heights with Feat Books!
+          </h2>
+        </div>
         <button className="px-6 py-3 bg-black text-white font-semibold rounded-md hover:bg-gray-200 transition">
           Explore our Services
         </button>
