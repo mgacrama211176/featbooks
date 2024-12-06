@@ -22,15 +22,15 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="flex flex-col font-glacial-indifference px-4  pt-8">
+    <nav className="flex flex-col font-glacial-indifference px-4 py-8">
       <div className="flex justify-between items-center">
         {/* Logo Section */}
         <Link href="/">
           <Image
             src="/featbooks.png"
             alt="logo"
-            width={250}
-            height={250}
+            width={200}
+            height={200}
             loading="eager"
             quality={100}
             priority
