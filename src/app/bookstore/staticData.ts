@@ -7,6 +7,14 @@ export const books = [
     rating: 4.5,
     image: "https://via.placeholder.com/200x300",
     genre: ["Fiction", "Classics"],
+    publisher: "Scribner",
+    publishedDate: "1925-04-10",
+    pages: 180,
+    language: "English",
+    description:
+      "A novel set in the Jazz Age that tells the story of the mysterious millionaire Jay Gatsby and his obsession with the beautiful Daisy Buchanan.",
+    synopsis:
+      "Nick Carraway, a young man from Minnesota, moves to New York in the summer of 1922 and rents a house in West Egg, a wealthy but unfashionable area populated by the new rich. His next-door neighbor is the enigmatic Jay Gatsby, a self-made millionaire who throws extravagant parties but doesn't partake in them. As Nick becomes drawn into Gatsby's world, he learns of Gatsby's love for Nick's cousin, Daisy Buchanan, and his desperate attempts to rekindle their romance.",
   },
   {
     id: 2,
@@ -16,6 +24,14 @@ export const books = [
     rating: 4.8,
     image: "https://via.placeholder.com/200x300",
     genre: ["Fiction", "Classics"],
+    publisher: "J.B. Lippincott & Co.",
+    publishedDate: "1960-07-11",
+    pages: 281,
+    language: "English",
+    description:
+      "A novel about the serious issues of rape and racial inequality, told through the eyes of a young girl in the Deep South.",
+    synopsis:
+      "Scout Finch lives with her brother, Jem, and their widowed father, Atticus, in the sleepy town of Maycomb, Alabama. When Atticus, a lawyer, defends a black man, Tom Robinson, accused of raping a white woman, the town's ingrained racial prejudices are exposed. Through Scout's eyes, we see the impact of these events on her family and the community.",
   },
   {
     id: 3,
@@ -25,6 +41,14 @@ export const books = [
     rating: 4.9,
     image: "https://via.placeholder.com/200x300",
     genre: ["Science Fiction", "Fantasy"],
+    publisher: "Chilton Books",
+    publishedDate: "1965-08-01",
+    pages: 412,
+    language: "English",
+    description:
+      "A science fiction novel about the complex and multi-layered interactions of politics, religion, ecology, technology, and human emotion.",
+    synopsis:
+      "Set in the distant future amidst a huge interstellar empire, Dune tells the story of young Paul Atreides, whose family accepts the stewardship of the desert planet Arrakis. As the only source of the most valuable substance in the universe, 'spice', control of Arrakis is highly contested. Betrayal, rebellion, and the rise of a messianic figure ensue.",
   },
   {
     id: 4,
@@ -34,6 +58,14 @@ export const books = [
     rating: 4.7,
     image: "https://via.placeholder.com/200x300",
     genre: ["Fantasy", "Classics"],
+    publisher: "George Allen & Unwin",
+    publishedDate: "1937-09-21",
+    pages: 310,
+    language: "English",
+    description:
+      "A fantasy novel that follows the quest of home-loving hobbit Bilbo Baggins to win a share of the treasure guarded by Smaug the dragon.",
+    synopsis:
+      "Bilbo Baggins, a hobbit, is swept into an epic quest by Gandalf the wizard and a group of dwarves. Their goal is to reclaim the lost Kingdom of Erebor from the fearsome dragon Smaug. Along the way, Bilbo encounters trolls, goblins, elves, and the creature Gollum, from whom he acquires a mysterious and magical ring.",
   },
   {
     id: 5,
@@ -43,6 +75,14 @@ export const books = [
     rating: 4.6,
     image: "https://via.placeholder.com/200x300",
     genre: ["Romance", "Classics"],
+    publisher: "T. Egerton",
+    publishedDate: "1813-01-28",
+    pages: 279,
+    language: "English",
+    description:
+      "A romantic novel that charts the emotional development of the protagonist, Elizabeth Bennet, who learns the error of making hasty judgments.",
+    synopsis:
+      "Elizabeth Bennet navigates the issues of manners, upbringing, morality, education, and marriage in the society of the landed gentry of early 19th-century England. Her interactions with the proud and wealthy Mr. Darcy lead to a deeper understanding of each other's true character and feelings.",
   },
   {
     id: 6,
@@ -52,6 +92,14 @@ export const books = [
     rating: 4.3,
     image: "https://via.placeholder.com/200x300",
     genre: ["Thriller", "Mystery"],
+    publisher: "Celadon Books",
+    publishedDate: "2019-02-05",
+    pages: 336,
+    language: "English",
+    description:
+      "A psychological thriller about a woman who shoots her husband and then stops speaking, and the psychotherapist who tries to uncover her motive.",
+    synopsis:
+      "Alicia Berenson's life is seemingly perfect until one evening when she shoots her husband, Gabriel, five times in the face and then never speaks another word. Her refusal to talk turns a domestic tragedy into a mystery that captures the public imagination. Theo Faber, a forensic psychotherapist, is determined to get her to talk and unravel the mystery behind her silence.",
   },
   {
     id: 7,
@@ -61,6 +109,14 @@ export const books = [
     rating: 4.8,
     image: "https://via.placeholder.com/200x300",
     genre: ["Self-Help", "Non-Fiction"],
+    publisher: "Avery",
+    publishedDate: "2018-10-16",
+    pages: 320,
+    language: "English",
+    description:
+      "A self-help book that provides practical strategies for forming good habits, breaking bad ones, and mastering the tiny behaviors that lead to remarkable results.",
+    synopsis:
+      "James Clear draws on scientific research and real-world examples to explain how habits work and how they can be changed. He introduces the concept of 'atomic habits'—small changes that can lead to significant improvements over time. The book offers a framework for understanding and implementing these changes to achieve personal and professional goals.",
   },
   {
     id: 8,
@@ -70,6 +126,14 @@ export const books = [
     rating: 4.2,
     image: "https://via.placeholder.com/200x300",
     genre: ["Mystery", "Thriller"],
+    publisher: "Doubleday",
+    publishedDate: "2003-03-18",
+    pages: 454,
+    language: "English",
+    description:
+      "A mystery thriller novel that follows symbologist Robert Langdon and cryptologist Sophie Neveu as they investigate a murder in the Louvre Museum.",
+    synopsis:
+      "When the curator of the Louvre, Jacques Saunière, is found murdered, symbologist Robert Langdon and cryptologist Sophie Neveu are called to unravel the riddles he left behind. Their investigation reveals a trail of clues hidden in the works of Leonardo da Vinci, leading them to uncover a secret that has been protected by a clandestine society for centuries.",
   },
   {
     id: 9,
@@ -79,6 +143,14 @@ export const books = [
     rating: 4.7,
     image: "https://via.placeholder.com/200x300",
     genre: ["History", "Non-Fiction"],
+    publisher: "Harvill Secker",
+    publishedDate: "2011-06-04",
+    pages: 443,
+    language: "English",
+    description:
+      "A book that explores the history of humankind, from the emergence of Homo sapiens in the Stone Age to the present.",
+    synopsis:
+      "Yuval Noah Harari takes readers on a journey through the history of our species, examining how biology and history have defined us and enhanced our understanding of what it means to be 'human'. The book covers the Cognitive Revolution, the Agricultural Revolution, the unification of humankind, and the Scientific Revolution, offering insights into how we have shaped the world and how the world has shaped us.",
   },
   {
     id: 10,
@@ -88,6 +160,14 @@ export const books = [
     rating: 4.4,
     image: "https://via.placeholder.com/200x300",
     genre: ["Fiction", "Philosophy"],
+    publisher: "HarperTorch",
+    publishedDate: "1988-05-01",
+    pages: 208,
+    language: "English",
+    description:
+      "A philosophical novel that tells the story of a young shepherd named Santiago and his journey to find a hidden treasure.",
+    synopsis:
+      "Santiago, a shepherd boy, dreams of finding a treasure located somewhere in the Egyptian pyramids. He embarks on a journey from Spain to Egypt, meeting various characters along the way who teach him about the importance of listening to one's heart, recognizing opportunities, and following one's dreams. The novel emphasizes the idea that the journey itself is as important as the destination.",
   },
   {
     id: 11,
@@ -97,6 +177,14 @@ export const books = [
     rating: 4.6,
     image: "https://via.placeholder.com/200x300",
     genre: ["Science Fiction", "Classics"],
+    publisher: "Secker & Warburg",
+    publishedDate: "1949-06-08",
+    pages: 328,
+    language: "English",
+    description:
+      "A dystopian novel that explores the dangers of totalitarianism and extreme political ideology.",
+    synopsis:
+      "In a totalitarian society ruled by the Party and its leader, Big Brother, Winston Smith works at the Ministry of Truth, where he alters historical records to fit the Party's propaganda. As he becomes increasingly disillusioned with the regime, Winston begins a forbidden relationship with Julia and starts to question the Party's authority. His rebellion leads to a harrowing journey of self-discovery and the realization of the Party's absolute power.",
   },
   {
     id: 12,
@@ -106,6 +194,14 @@ export const books = [
     rating: 4.5,
     image: "https://via.placeholder.com/200x300",
     genre: ["Self-Help", "Business"],
+    publisher: "The Ralston Society",
+    publishedDate: "1937-03-01",
+    pages: 238,
+    language: "English",
+    description:
+      "A self-help book that outlines key principles for achieving personal and financial success.",
+    synopsis:
+      "Napoleon Hill draws on stories of famous millionaires of his generation to illustrate his principles of success. The book emphasizes the importance of desire, faith, persistence, and the power of the subconscious mind. Hill's philosophy is based on the idea that anyone can achieve success by following a specific set of principles and maintaining a positive mental attitude.",
   },
   {
     id: 13,
@@ -115,6 +211,14 @@ export const books = [
     rating: 4.6,
     image: "https://via.placeholder.com/200x300",
     genre: ["Fiction", "Fantasy"],
+    publisher: "Canongate Books",
+    publishedDate: "2020-08-13",
+    pages: 304,
+    language: "English",
+    description:
+      "A novel that explores the choices that go into a life well lived, through the lens of a magical library that allows people to live different versions of their lives.",
+    synopsis:
+      "Nora Seed finds herself in the Midnight Library, a place between life and death where she can try out different lives she could have lived. Each book in the library represents a different version of her life, based on the choices she made. As she explores these alternate realities, Nora learns about herself and what truly makes life worth living.",
   },
   {
     id: 14,
@@ -124,6 +228,14 @@ export const books = [
     rating: 4.8,
     image: "https://via.placeholder.com/200x300",
     genre: ["Science Fiction", "Adventure"],
+    publisher: "Ballantine Books",
+    publishedDate: "2021-05-04",
+    pages: 496,
+    language: "English",
+    description:
+      "A science fiction novel about a lone astronaut's mission to save Earth from disaster.",
+    synopsis:
+      "Ryland Grace is the sole survivor on a desperate, last-chance mission to save humanity. When he wakes up alone on a spaceship with no memory of who he is or how he got there, he must piece together his past and complete his mission. As he uncovers the mystery of his mission, he realizes that he is not as alone as he thought.",
   },
   {
     id: 15,
@@ -133,6 +245,14 @@ export const books = [
     rating: 4.7,
     image: "https://via.placeholder.com/200x300",
     genre: ["Finance", "Self-Help"],
+    publisher: "Harriman House",
+    publishedDate: "2020-09-08",
+    pages: 256,
+    language: "English",
+    description:
+      "A book that explores the ways people think about money and how their behaviors impact their financial success.",
+    synopsis:
+      "Morgan Housel uses 19 short stories to illustrate the complex relationship people have with money. He delves into the psychology behind financial decisions and offers insights into how to make better choices. The book emphasizes the importance of understanding one's own behavior and the role of luck and risk in financial success.",
   },
   {
     id: 16,
@@ -142,6 +262,14 @@ export const books = [
     rating: 4.3,
     image: "https://via.placeholder.com/200x300",
     genre: ["Mystery", "Crime"],
+    publisher: "Viking",
+    publishedDate: "2020-09-03",
+    pages: 400,
+    language: "English",
+    description:
+      "A mystery novel about a group of retirees who meet weekly to solve cold cases and find themselves in the middle of a real-life murder investigation.",
+    synopsis:
+      "In a peaceful retirement village, four unlikely friends meet every Thursday to discuss unsolved crimes. When a local developer is found dead, the Thursday Murder Club suddenly finds themselves in the middle of their first live case. As they work together to solve the mystery, they uncover secrets and form unexpected bonds.",
   },
   {
     id: 17,
@@ -151,6 +279,14 @@ export const books = [
     rating: 4.8,
     image: "https://via.placeholder.com/200x300",
     genre: ["Fiction", "Literary"],
+    publisher: "G.P. Putnam's Sons",
+    publishedDate: "2018-08-14",
+    pages: 368,
+    language: "English",
+    description:
+      "A novel that intertwines a coming-of-age story with a murder mystery, set in the marshes of North Carolina.",
+    synopsis:
+      "Kya Clark, the 'Marsh Girl', grows up isolated in the swamps of North Carolina. When the town's golden boy, Chase Andrews, is found dead, Kya becomes the prime suspect. As the investigation unfolds, the story alternates between Kya's childhood and the present, revealing the secrets of her life and the truth behind the murder.",
   },
   {
     id: 18,
@@ -160,6 +296,14 @@ export const books = [
     rating: 4.7,
     image: "https://via.placeholder.com/200x300",
     genre: ["Historical Fiction", "Romance"],
+    publisher: "Atria Books",
+    publishedDate: "2017-06-13",
+    pages: 400,
+    language: "English",
+    description:
+      "A novel that tells the story of a reclusive Hollywood icon and her seven marriages, as recounted to an unknown journalist.",
+    synopsis:
+      "Aging and reclusive Hollywood movie icon Evelyn Hugo is finally ready to tell the truth about her glamorous and scandalous life. When she chooses unknown magazine reporter Monique Grant for the job, no one is more astounded than Monique herself. As Evelyn's story unfolds, it becomes clear that their lives intersect in tragic and irreversible ways.",
   },
   {
     id: 19,
@@ -169,6 +313,14 @@ export const books = [
     rating: 4.7,
     image: "https://via.placeholder.com/200x300",
     genre: ["Biography", "Non-Fiction"],
+    publisher: "Random House",
+    publishedDate: "2018-02-20",
+    pages: 334,
+    language: "English",
+    description:
+      "A memoir about a woman who grows up in a strict and abusive household in rural Idaho but eventually escapes to learn about the wider world through education.",
+    synopsis:
+      "Tara Westover was 17 the first time she set foot in a classroom. Born to survivalists in the mountains of Idaho, she prepared for the end of the world by stockpiling home-canned peaches and sleeping with her 'head-for-the-hills bag'. Lacking any formal education, she began to educate herself, eventually earning a PhD from Cambridge University. Her memoir is a tale of fierce family loyalty and the grief that comes with severing the closest of ties.",
   },
   {
     id: 20,
@@ -178,6 +330,14 @@ export const books = [
     rating: 4.4,
     image: "https://via.placeholder.com/200x300",
     genre: ["Fantasy", "Historical Fiction"],
+    publisher: "Tor Books",
+    publishedDate: "2020-10-06",
+    pages: 448,
+    language: "English",
+    description:
+      "A fantasy novel about a young woman who makes a Faustian bargain to live forever but is cursed to be forgotten by everyone she meets.",
+    synopsis:
+      "In 1714 France, a young woman named Addie LaRue makes a deal with the devil to live forever, but in return, she is cursed to be forgotten by everyone she meets. For centuries, she lives a lonely and invisible life, until one day, in a hidden bookstore in New York City, she meets a man who remembers her name.",
   },
   {
     id: 21,
@@ -187,6 +347,14 @@ export const books = [
     rating: 4.5,
     image: "https://via.placeholder.com/200x300",
     genre: ["Finance", "Self-Help"],
+    publisher: "Warner Books",
+    publishedDate: "1997-04-01",
+    pages: 207,
+    language: "English",
+    description:
+      "A personal finance book that advocates the importance of financial literacy, financial independence, and building wealth through investing in assets.",
+    synopsis:
+      "Robert T. Kiyosaki shares the lessons he learned from his 'rich dad' and 'poor dad'. His biological father, the poor dad, was highly educated but struggled financially, while his best friend's father, the rich dad, was a successful entrepreneur. The book contrasts their philosophies on money and investing, emphasizing the importance of financial education and the mindset needed to achieve financial success.",
   },
   {
     id: 22,
@@ -196,6 +364,14 @@ export const books = [
     rating: 4.6,
     image: "https://via.placeholder.com/200x300",
     genre: ["Historical Fiction", "Romance"],
+    publisher: "Ecco Press",
+    publishedDate: "2011-09-20",
+    pages: 378,
+    language: "English",
+    description:
+      "A retelling of the Iliad from the perspective of Patroclus, focusing on his relationship with Achilles.",
+    synopsis:
+      "Patroclus, an awkward young prince, is exiled to the court of King Peleus and his perfect son Achilles. Despite their differences, the boys develop a deep bond. As they grow into young men, their bond blossoms into something deeper, despite the disapproval of the gods. When Helen of Sparta is kidnapped, Achilles is called to war in Troy, and Patroclus follows, torn between love and fear for his friend.",
   },
   {
     id: 23,
@@ -205,6 +381,12 @@ export const books = [
     rating: 4.4,
     image: "https://via.placeholder.com/200x300",
     genre: ["Thriller", "Romance"],
+    publisher: "Grand Central Publishing",
+    publishedDate: "2018-12-07",
+    pages: 336,
+    language: "English",
+    description:
+      "A psychological thriller about a struggling writer who is hired to complete the remaining books in a successful series after the original author is incapacitated.",
   },
   {
     id: 24,
@@ -214,6 +396,10 @@ export const books = [
     rating: 4.8,
     image: "https://via.placeholder.com/200x300",
     genre: ["Fantasy", "Romance"],
+    publisher: "Tor Books",
+    publishedDate: "2020-03-17",
+    pages: 396,
+    language: "English",
   },
   {
     id: 25,
@@ -223,6 +409,10 @@ export const books = [
     rating: 4.6,
     image: "https://via.placeholder.com/200x300",
     genre: ["Self-Help", "Non-Fiction"],
+    publisher: "Viking",
+    publishedDate: "1998-09-01",
+    pages: 452,
+    language: "English",
   },
   {
     id: 26,
@@ -232,6 +422,10 @@ export const books = [
     rating: 4.5,
     image: "https://via.placeholder.com/200x300",
     genre: ["Romance", "Contemporary"],
+    publisher: "Atria Books",
+    publishedDate: "2016-08-02",
+    pages: 376,
+    language: "English",
   },
   {
     id: 27,
@@ -241,6 +435,10 @@ export const books = [
     rating: 4.4,
     image: "https://via.placeholder.com/200x300",
     genre: ["Self-Help", "Non-Fiction"],
+    publisher: "HarperOne",
+    publishedDate: "2016-09-13",
+    pages: 224,
+    language: "English",
   },
   {
     id: 28,
@@ -250,6 +448,10 @@ export const books = [
     rating: 4.7,
     image: "https://via.placeholder.com/200x300",
     genre: ["Science Fiction", "Classics"],
+    publisher: "Gnome Press",
+    publishedDate: "1951-05-01",
+    pages: 255,
+    language: "English",
   },
   {
     id: 29,
@@ -259,6 +461,10 @@ export const books = [
     rating: 4.6,
     image: "https://via.placeholder.com/200x300",
     genre: ["Psychology", "Self-Help"],
+    publisher: "Random House",
+    publishedDate: "2012-02-28",
+    pages: 371,
+    language: "English",
   },
   {
     id: 30,
@@ -268,6 +474,10 @@ export const books = [
     rating: 4.3,
     image: "https://via.placeholder.com/200x300",
     genre: ["Horror", "Historical Fiction"],
+    publisher: "Del Rey",
+    publishedDate: "2020-06-30",
+    pages: 301,
+    language: "English",
   },
   {
     id: 31,
@@ -277,6 +487,10 @@ export const books = [
     rating: 4.7,
     image: "https://via.placeholder.com/200x300",
     genre: ["Business", "Non-Fiction"],
+    publisher: "Crown Publishing Group",
+    publishedDate: "2011-09-13",
+    pages: 336,
+    language: "English",
   },
   {
     id: 32,
@@ -286,5 +500,9 @@ export const books = [
     rating: 4.5,
     image: "https://via.placeholder.com/200x300",
     genre: ["Fantasy", "Romance"],
+    publisher: "Doubleday",
+    publishedDate: "2011-09-13",
+    pages: 387,
+    language: "English",
   },
 ];
