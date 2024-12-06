@@ -3,8 +3,6 @@ import React from "react";
 import { Star, Heart, ShoppingCart } from "lucide-react";
 import { books } from "./staticData";
 
-// Updated mock data with genres
-
 // Get unique genres from books
 const allGenres = Array.from(
   new Set(books.flatMap((book) => book.genre))
@@ -101,6 +99,7 @@ const BookStore = () => {
               className="w-full h-48 object-cover mb-4"
             />
             <h2 className="text-xl font-semibold mb-2">{book.title}</h2>
+            <p className="text-gray-600 mb-2">{book.author}</p>
             <div className="flex items-center mb-2">
               {[...Array(5)].map((_, index) => (
                 <Star

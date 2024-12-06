@@ -3,10 +3,10 @@ import Link from "next/link";
 
 const Login = () => {
   return (
-    <section className="h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <section className="h-[80vh] flex justify-center py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
-          <h1 className="mt-6 text-center text-3xl font-bold text-gray-900">
+          <h1 className="text-center text-3xl font-bold text-gray-900">
             Sign in to your account
           </h1>
           <p className="mt-2 text-center text-sm text-gray-600">
