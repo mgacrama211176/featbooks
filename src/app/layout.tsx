@@ -6,14 +6,14 @@ import "./globals.css";
 const glacialIndifference = localFont({
   src: "/fonts/GlacialIndifference-Regular.otf",
   variable: "--font-glacial-indifference",
-  weight: "400 500 700 ",
+  weight: "400",
   display: "swap",
 });
 
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
-  weight: "400",
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 

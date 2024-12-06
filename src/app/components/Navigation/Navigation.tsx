@@ -127,9 +127,13 @@ const Navigation = () => {
         ))}
 
         <div className="flex justify-start pt-6">
-          <button className="bg-[#edc34a] text-white px-4 py-2 rounded-md">
+          <Link
+            href="/login"
+            className="bg-[#edc34a] text-white px-4 py-2 rounded-md flex items-center gap-2"
+          >
+            <User />
             Login/Register
-          </button>
+          </Link>
         </div>
       </div>
 
