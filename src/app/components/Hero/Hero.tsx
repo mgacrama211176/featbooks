@@ -32,7 +32,7 @@ const Hero = () => {
           </h2>
         </div>
         <button
-          className="px-6 py-3 bg-black text-white font-semibold rounded-md hover:bg-gray-200 transition"
+          className="px-6 py-3 bg-black text-white font-semibold rounded-md hover:bg-[#edc34a] hover:text-black transition"
           aria-label="Explore our Services"
         >
           Explore our Services
@@ -44,7 +44,6 @@ const Hero = () => {
         >
           <ChevronDown size={52} aria-hidden="true" />
         </Link>
-        app manag
       </div>
     </section>
   );

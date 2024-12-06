@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 const About = () => {
   return (
     <section
@@ -25,6 +25,11 @@ const About = () => {
             all celebrate every feat and share every story.
           </p>
         </div>
+        <Link href="/contact">
+          <button className="px-6 py-3 mt-6 bg-black text-white font-semibold rounded-md hover:bg-[#edc34a] hover:text-black transition">
+            Learn more about us!
+          </button>
+        </Link>
       </div>
     </section>
   );

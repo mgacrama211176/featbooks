@@ -90,7 +90,7 @@ const Navigation = () => {
               {name}
             </Link>
           ))} */}
-          <Link href="/login" className="flex items-center gap-2">
+          <Link href="/auth/login" className="flex items-center gap-2">
             <User className="text-gray-700" />
             Login/Register
           </Link>
@@ -128,7 +128,7 @@ const Navigation = () => {
 
         <div className="flex justify-start pt-6">
           <Link
-            href="/login"
+            href="/auth/login"
             className="bg-[#edc34a] text-white px-4 py-2 rounded-md flex items-center gap-2"
           >
             <User />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Footer from "./components/Footer/Footer";
 
 const glacialIndifference = localFont({
   src: "/fonts/GlacialIndifference-Regular.otf",
@@ -33,6 +34,7 @@ export default function RootLayout({
         className={`${glacialIndifference.variable} ${poppins.variable} antialiased`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );
