@@ -68,16 +68,20 @@ const BookDetailPage = () => {
           </div>
 
           {/* Description */}
-          <div>
-            <h2 className="text-xl font-semibold mb-2">Description</h2>
-            <p className="text-gray-700">{book.description}</p>
-          </div>
+          {book.description && (
+            <div>
+              <h2 className="text-xl font-semibold mb-2">Description</h2>
+              <p className="text-gray-700">{book.description}</p>
+            </div>
+          )}
 
           {/* Synopsis */}
-          <div>
-            <h2 className="text-xl font-semibold mb-2">Synopsis</h2>
-            <p className="text-gray-700">{book.synopsis}</p>
-          </div>
+          {book.synopsis && (
+            <div>
+              <h2 className="text-xl font-semibold mb-2">Synopsis</h2>
+              <p className="text-gray-700">{book.synopsis}</p>
+            </div>
+          )}
 
           {/* Action Buttons */}
           <div className="flex space-x-4">

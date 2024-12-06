@@ -7,10 +7,10 @@ export interface Book {
   price: number;
   rating: number;
   image: string;
-  description: string;
+  description?: string;
   synopsis?: string;
   publisher: string;
-  publishedDate?: string;
-  pages?: number;
-  language?: string;
+  publishedDate: string;
+  pages: number;
+  language: string;
 }
