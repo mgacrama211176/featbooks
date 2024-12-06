@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import { Edit3, BookOpen, BarChart2, Upload } from "lucide-react";
+import useScrollTrigger from "@/app/hooks/ScrollTriggerOptions";
 
 const services = [
   {
@@ -34,10 +36,18 @@ const services = [
 ];
 
 const Services = () => {
+  const { isVisible } = useScrollTrigger("services", {
+    threshold: 0.6,
+  });
+
   return (
-    <section className="py-20 bg-[#edc34a]" id="services">
+    <section className="py-20 bg-[#edc34a] overflow-hidden" id="services">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 font-poppins text-black">
+        <h2
+          className={`text-4xl md:text-5xl font-bold text-center mb-16 font-poppins text-black transform transition-all duration-700 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
+        >
           What We Offer
         </h2>
 
@@ -47,7 +57,15 @@ const Services = () => {
             return (
               <div
                 key={index}
-                className="group p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-black hover:text-white border border-black/10"
+                className={`group p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-black hover:text-white border border-black/10 transform ${
+                  isVisible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-10 opacity-0"
+                }`}
+                style={{
+                  transitionDelay: `${100 * index}ms`,
+                  transitionDuration: "700ms",
+                }}
               >
                 <div className="flex flex-col items-center text-center">
                   <div className="w-20 h-20 mb-6 flex items-center justify-center">
