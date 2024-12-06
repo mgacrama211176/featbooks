@@ -11,7 +11,7 @@ const NAVIGATION_MENU = [
   { name: "About Us", href: "/" },
   { name: "Services", href: "/" },
   { name: "Bookstore", href: "/bookstore" },
-  { name: "Contact Us", href: "/" },
+  { name: "Contact Us", href: "/#contact" },
 ] as const;
 
 const Navigation = () => {
