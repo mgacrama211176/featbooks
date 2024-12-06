@@ -12,16 +12,20 @@ const BookStore = () => {
   const [wishlist, setWishlist] = React.useState<number[]>([]);
   const [searchQuery, setSearchQuery] = React.useState("");
   const [selectedGenre, setSelectedGenre] = React.useState<string>("All");
+  const [selectedAuthor, setSelectedAuthor] = React.useState<string>("All");
   const [visibleBooks, setVisibleBooks] = React.useState(10);
 
-  // Filter books based on search and genre
+  // Filter books based on search and genre and author
   const filteredBooks = books.filter((book) => {
-    const matchesSearch = book.title
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase());
+    const matchesSearch =
+      book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      book.author.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesGenre =
       selectedGenre === "All" || book.genre.includes(selectedGenre);
-    return matchesSearch && matchesGenre;
+    const matchesAuthor =
+      selectedAuthor === "All" || book.author.includes(selectedAuthor);
+
+    return matchesSearch && matchesGenre && matchesAuthor;
   });
 
   // Get only the visible portion of filtered books
