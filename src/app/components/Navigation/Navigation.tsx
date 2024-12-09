@@ -8,7 +8,7 @@ import { Search, User, Heart, ShoppingCart, Menu } from "lucide-react";
 // Separate navigation menu items into a constant
 const NAVIGATION_MENU = [
   { name: "Home", href: "/" },
-  { name: "About Us", href: "/" },
+  { name: "About Us", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Bookstore", href: "/bookstore" },
   { name: "Contact Us", href: "/#contact" },
