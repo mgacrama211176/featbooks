@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <div className="">
-      <div className="pr-4">
+      <div className="">
         <Navigation />
       </div>
       {children}

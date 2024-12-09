@@ -6,7 +6,7 @@ import Services from "../components/Services/Services";
 import ContactUs from "../components/ContactUs/ContactUs";
 const Home = () => {
   return (
-    <div className="">
+    <div>
       <Navigation />
       <Hero />
       <About />
