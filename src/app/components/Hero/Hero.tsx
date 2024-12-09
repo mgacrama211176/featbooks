@@ -55,12 +55,13 @@ const Hero = () => {
             Conquer new heights with Feat Books!
           </h2>
         </div>
-        <button
+        <Link
+          href="/services"
           className="px-6 py-3 bg-black text-white font-semibold rounded-md hover:bg-[#edc34a] hover:text-black transition"
           aria-label="Explore our Services"
         >
           Explore our Services
-        </button>
+        </Link>
         <Link
           href="#about"
           className="items-center gap-2 text-white hover:text-gray-200 transition animate-bounce-slow absolute bottom-10 hidden md:flex"

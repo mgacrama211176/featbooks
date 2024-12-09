@@ -1,14 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Instagram,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Youtube,
-  Mail,
-} from "lucide-react";
+import { Mail as MailIcon } from "lucide-react";
+
 import NewsLetter from "./NewsLetter";
 
 const Footer = () => {
@@ -34,7 +28,7 @@ const Footer = () => {
               href="mailto:info@featbooks.com"
               className="flex items-center gap-2 text-sm hover:text-black/70 transition-colors"
             >
-              <Mail size={16} />
+              <MailIcon size={16} />
               info@featbooks.com
             </a>
           </div>
@@ -128,31 +122,10 @@ const Footer = () => {
           {/* Newsletter Column */}
           <NewsLetter />
         </div>
-
-        {/* Social Links */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-black/10">
-          <p className="text-sm mb-4 md:mb-0">
-            FEAT BOOKS COPYRIGHT © {new Date().getFullYear()}. ALL RIGHTS
-            RESERVED.
-          </p>
-          <div className="flex gap-4">
-            <Link href="#" className="hover:text-black/70 transition-colors">
-              <Instagram size={20} />
-            </Link>
-            <Link href="#" className="hover:text-black/70 transition-colors">
-              <Facebook size={20} />
-            </Link>
-            <Link href="#" className="hover:text-black/70 transition-colors">
-              <Twitter size={20} />
-            </Link>
-            <Link href="#" className="hover:text-black/70 transition-colors">
-              <Linkedin size={20} />
-            </Link>
-            <Link href="#" className="hover:text-black/70 transition-colors">
-              <Youtube size={20} />
-            </Link>
-          </div>
-        </div>
+        <p className="text-sm mb-4 md:mb-0 text-center">
+          FEAT BOOKS COPYRIGHT © {new Date().getFullYear()}. ALL RIGHTS
+          RESERVED.
+        </p>
       </div>
     </footer>
   );

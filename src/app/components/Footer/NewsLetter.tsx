@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import axios from "axios";
+import SocialMedia from "./SocialMedia";
 
 const NewsLetter = () => {
   const [email, setEmail] = useState("");
@@ -41,6 +42,7 @@ const NewsLetter = () => {
           Submit
         </button>
       </form>
+      <SocialMedia />
     </div>
   );
 };

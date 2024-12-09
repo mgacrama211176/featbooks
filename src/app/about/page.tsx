@@ -37,8 +37,8 @@ const AboutPage = () => {
             Every great story begins with a vision—a spark of inspiration, a
             challenge to overcome. At Feat Books, we have firsthand the passion,
             perseverance, and creativity it takes to climb the mountain of
-            storytelling. That's why we're here to guide authors and content
-            creators through every step of their journey.
+            storytelling. That&apos;s why we&apos;re here to guide authors and
+            content creators through every step of their journey.
           </p>
           <p>
             Born out of a love for storytelling and the desire to empower
@@ -51,11 +51,12 @@ const AboutPage = () => {
           <p>
             Feat Books was built to combine expert editing, beautiful design,
             strategic marketing, and a seamless user platform—all with a
-            personalized touch. We're more than just a publishing platform;
-            we're your biggest champion and your most creative partner. We're
-            here to celebrate your triumphs and ensure your story reaches its
-            rightful audience. Together, we'll scale the mountain of
-            storytelling, leaving a trail of inspiration for others to follow.
+            personalized touch. We&apos;re more than just a publishing platform;
+            we&apos;re your biggest champion and your most creative partner.
+            We&apos;re here to celebrate your triumphs and ensure your story
+            reaches its rightful audience. Together, we&apos;ll scale the
+            mountain of storytelling, leaving a trail of inspiration for others
+            to follow.
           </p>
         </div>
       </div>
@@ -106,8 +107,8 @@ const AboutPage = () => {
           Ready to Start Your Journey?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join us in creating something extraordinary. Let's bring your story to
-          life together.
+          Join us in creating something extraordinary. Let&apos;s bring your
+          story to life together.
         </p>
         <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
           Get Started Today
