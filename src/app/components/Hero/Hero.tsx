@@ -48,10 +48,10 @@ const Hero = () => {
         id="hero-text"
       >
         <div className="animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-glacial-indifference">
+          <h1 className="text-4xl md:text-7xl font-bold mb-4 font-glacial-indifference">
             Celebrating Every Feat Sharing Every Story
           </h1>
-          <h2 className="text-2xl md:text-3xl mb-6">
+          <h2 className="text-2xl md:text-4xl mb-6">
             Conquer new heights with Feat Books!
           </h2>
         </div>

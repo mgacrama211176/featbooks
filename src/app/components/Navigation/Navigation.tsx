@@ -9,7 +9,7 @@ import { Search, User, Heart, ShoppingCart, Menu } from "lucide-react";
 const NAVIGATION_MENU = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/" },
-  { name: "Services", href: "/" },
+  { name: "Services", href: "/services" },
   { name: "Bookstore", href: "/bookstore" },
   { name: "Contact Us", href: "/#contact" },
 ] as const;
