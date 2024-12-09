@@ -47,7 +47,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/#contact"
                   className="text-sm hover:text-black/70 transition-colors"
                 >
                   Contact Us

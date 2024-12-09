@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Search, User, Heart, ShoppingCart, Menu } from "lucide-react";
+import { User, Heart, ShoppingCart, Menu } from "lucide-react";
+import SearchComponent from "./SearchComponent";
 
 // Separate navigation menu items into a constant
 const NAVIGATION_MENU = [
@@ -53,7 +54,9 @@ const Navigation = () => {
         </div>
 
         {/* User Menu Section */}
+
         <div className=" items-center gap-4 hidden lg:flex">
+          <SearchComponent />
           <Link href="/auth/login" className="flex items-center gap-2">
             <User className="text-gray-700" />
             Login/Register

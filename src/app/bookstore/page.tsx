@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import BookCard from "../components/bookCard/BookCard";
 import { books } from "./staticData";
 
@@ -9,23 +10,30 @@ const allGenres = Array.from(
 ).sort();
 
 const BookStore = () => {
+  const searchParams = useSearchParams();
   const [wishlist, setWishlist] = React.useState<number[]>([]);
-  const [searchQuery, setSearchQuery] = React.useState("");
+  const [searchQuery, setSearchQuery] = useState("");
   const [selectedGenre, setSelectedGenre] = React.useState<string>("All");
   const [selectedAuthor, setSelectedAuthor] = React.useState<string>("All");
   const [visibleBooks, setVisibleBooks] = React.useState(10);
 
-  // Filter books based on search and genre and author
-  const filteredBooks = books.filter((book) => {
-    const matchesSearch =
-      book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      book.author.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesGenre =
-      selectedGenre === "All" || book.genre.includes(selectedGenre);
-    const matchesAuthor =
-      selectedAuthor === "All" || book.author.includes(selectedAuthor);
+  // Update search query when URL params change
+  useEffect(() => {
+    const search = searchParams.get("search");
+    if (search) {
+      setSearchQuery(search);
+    }
+  }, [searchParams]);
 
-    return matchesSearch && matchesGenre && matchesAuthor;
+  // Filter books based on search query
+  const filteredBooks = books.filter((book) => {
+    const matchesSearch = searchQuery
+      ? book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        book.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        book.description?.toLowerCase().includes(searchQuery.toLowerCase())
+      : true;
+
+    return matchesSearch;
   });
 
   // Get only the visible portion of filtered books
