@@ -32,7 +32,7 @@ const AboutPage = () => {
       {/* Hero Section */}
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h1>
-        <div className="max-w-4xl mx-auto text-lg text-gray-600 leading-relaxed space-y-4">
+        <div className="max-w-4xl mx-auto text-xl text-gray-600 leading-relaxed space-y-4 ">
           <p>
             Every great story begins with a vision—a spark of inspiration, a
             challenge to overcome. At Feat Books, we have firsthand the passion,
@@ -63,16 +63,16 @@ const AboutPage = () => {
       {/* Mission & Vision Section */}
       <div className="grid md:grid-cols-2 gap-8 mb-16">
         <div className="bg-amber-100 p-8 rounded-xl">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Mission</h2>
-          <p className="text-lg text-gray-700">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Mission</h2>
+          <p className="text-xl text-gray-700">
             To empower authors and content creators by providing exceptional
             publishing, design, and marketing services that amplify their
             stories and help them connect with their audiences.
           </p>
         </div>
         <div className="bg-amber-100 p-8 rounded-xl">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Vision</h2>
-          <p className="text-lg text-gray-700">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Vision</h2>
+          <p className="text-xl text-gray-700">
             To be the leading platform for storytellers, inspiring creativity
             and success through seamless publishing solutions and personalized
             support.
@@ -82,17 +82,17 @@ const AboutPage = () => {
 
       {/* Core Values Section */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12">Core Values</h2>
+        <h2 className="text-4xl font-bold text-gray-900 mb-12">Core Values</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {coreValues.map((value, index) => (
             <div
               key={index}
               className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-3">
                 {value.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed text-xl">
                 {value.description}
               </p>
             </div>
@@ -102,7 +102,7 @@ const AboutPage = () => {
 
       {/* Call to Action */}
       <div className="text-center mt-16 bg-amber-50 rounded-2xl p-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <h2 className="text-4xl font-bold text-gray-900 mb-6">
           Ready to Start Your Journey?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
