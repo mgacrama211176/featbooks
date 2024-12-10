@@ -4,14 +4,18 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { setCookie } from "@/app/utils/cookies";
+import { useUserStore } from "@/app/state/useUserStore";
+import { Loader } from "lucide-react";
 
 const Login = () => {
   const router = useRouter();
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState<boolean>(false);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     ("use server");
     e.preventDefault();
+    setLoading(true);
 
     const email = e.currentTarget.email.value;
     const password = e.currentTarget.password.value;
@@ -22,15 +26,26 @@ const Login = () => {
         password,
       })
       .then((res) => {
-        console.log(res);
         setCookie("Token", res.data.accessToken, res.data.expiresIn);
-        localStorage.setItem("id", JSON.stringify(res.data.id));
-        // router.push("/");
+
+        const user = {
+          id: res.data.id,
+          email: res.data.email,
+          name: res.data.displayName,
+          role: res.data.role,
+          photoURL: res.data.photoURL,
+          phoneNumber: res.data.phoneNumber,
+        };
+
+        const setUser = useUserStore.setState({ user });
+        localStorage.setItem("user", JSON.stringify(user));
+        router.push("/dashboard");
       })
       .catch((err) => {
         const errorMessage = err.response.data.error;
         setError(errorMessage);
       });
+    setLoading(false);
   };
 
   return (
@@ -113,7 +128,7 @@ const Login = () => {
               type="submit"
               className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-[#edc34a] hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
             >
-              Sign in
+              {loading ? <Loader className="animate-spin" /> : "Sign in"}
             </button>
           </div>
         </form>

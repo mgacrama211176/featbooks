@@ -1,10 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { User, Heart, ShoppingCart, Menu } from "lucide-react";
 import SearchComponent from "./SearchComponent";
+import useLoggedUser from "@/app/hooks/useLoggedUser";
+import { usePathname } from "next/navigation";
+import { useUserStore } from "@/app/state/useUserStore";
 
 // Separate navigation menu items into a constant
 const NAVIGATION_MENU = [
@@ -17,6 +20,9 @@ const NAVIGATION_MENU = [
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const user = useUserStore((state) => state.user);
+
+  console.log(user);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -54,14 +60,25 @@ const Navigation = () => {
         </div>
 
         {/* User Menu Section */}
-
-        <div className=" items-center gap-4 hidden lg:flex">
-          <SearchComponent />
-          <Link href="/auth/login" className="flex items-center gap-2">
-            <User className="text-gray-700" />
-            Login/Register
-          </Link>
-        </div>
+        {user ? (
+          <div className=" items-center gap-4 hidden lg:flex">
+            <SearchComponent />
+            <Link href="/dashboard" className="flex items-center gap-2">
+              <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                <User className="w-4 h-4 text-white" />
+              </div>{" "}
+              {user.name}
+            </Link>
+          </div>
+        ) : (
+          <div className=" items-center gap-4 hidden lg:flex">
+            <SearchComponent />
+            <Link href="/auth/login" className="flex items-center gap-2">
+              <User className="text-gray-700" />
+              Login/Register
+            </Link>
+          </div>
+        )}
 
         {/* Burger Icon for Mobile */}
         <div className="lg:hidden hover:cursor-pointer">
@@ -103,21 +120,6 @@ const Navigation = () => {
           </Link>
         </div>
       </div>
-
-      {/* <div
-        className={`lg:flex-row lg:flex ${
-          isMenuOpen
-            ? "flex flex-col fixed top-0 left-0 w-full bg-white z-50"
-            : "hidden"
-        } justify-between  font-bold text-lg`}
-      >
-        <div
-          className="flex justify-end lg:hidden p-4 hover:cursor-pointer"
-          onClick={toggleMenu}
-        >
-          <span>X</span>
-        </div>
-      </div> */}
     </nav>
   );
 };
