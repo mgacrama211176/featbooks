@@ -1,7 +1,38 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import axios from "axios";
+import { setCookie } from "@/app/utils/cookies";
 
 const Login = () => {
+  const router = useRouter();
+  const [error, setError] = useState("");
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    ("use server");
+    e.preventDefault();
+
+    const email = e.currentTarget.email.value;
+    const password = e.currentTarget.password.value;
+
+    const response = await axios
+      .post("/api/auth/login", {
+        email,
+        password,
+      })
+      .then((res) => {
+        console.log(res);
+        setCookie("Token", res.data.accessToken, res.data.expiresIn);
+        localStorage.setItem("id", JSON.stringify(res.data.id));
+        // router.push("/");
+      })
+      .catch((err) => {
+        const errorMessage = err.response.data.error;
+        setError(errorMessage);
+      });
+  };
+
   return (
     <section className="h-[80vh] flex justify-center py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
@@ -19,7 +50,7 @@ const Login = () => {
             </Link>
           </p>
         </div>
-        <form className="mt-8 space-y-6">
+        <form className="mt-8 space-y-6" onSubmit={onSubmit}>
           <div className="rounded-md shadow-sm space-y-4">
             <div>
               <label htmlFor="email" className="sr-only">
@@ -48,6 +79,8 @@ const Login = () => {
               />
             </div>
           </div>
+
+          {error && <p className="text-red-500 text-center">{error}</p>}
 
           <div className="flex items-center justify-between">
             <div className="flex items-center">

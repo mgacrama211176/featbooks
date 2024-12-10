@@ -18,7 +18,7 @@ export default {
       },
       animation: {
         "fade-in": "fadeIn 1s ease-in-out",
-        "bounce": "bounce 1s infinite",
+        bounce: "bounce 1s infinite",
         "bounce-slow": "bounce 2s infinite",
       },
       keyframes: {

@@ -7,7 +7,7 @@ interface ScrollTriggerOptions {
 
 const useScrollTrigger = (
   elementId: string,
-  options: ScrollTriggerOptions = {}
+  options: ScrollTriggerOptions = {},
 ) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isVisible, setIsVisible] = useState(false);

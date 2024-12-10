@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     if (!querySnapshot.empty) {
       return NextResponse.json(
         { error: "Email already subscribed" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -30,13 +30,13 @@ export async function POST(request: Request) {
 
     return NextResponse.json(
       { message: "Successfully subscribed to newsletter" },
-      { status: 201 }
+      { status: 201 },
     );
   } catch (error) {
     console.error("Newsletter subscription error:", error);
     return NextResponse.json(
       { error: "Failed to subscribe to newsletter" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

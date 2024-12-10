@@ -6,7 +6,7 @@ import { books } from "./staticData";
 
 // Get unique genres from books
 const allGenres = Array.from(
-  new Set(books.flatMap((book) => book.genre))
+  new Set(books.flatMap((book) => book.genre)),
 ).sort();
 
 const BookStoreContent = () => {
@@ -48,7 +48,7 @@ const BookStoreContent = () => {
     setWishlist((prev) =>
       prev.includes(bookId)
         ? prev.filter((id) => id !== bookId)
-        : [...prev, bookId]
+        : [...prev, bookId],
     );
   };
 
