@@ -10,6 +10,7 @@ import {
   Users2,
   ShoppingBag,
 } from "lucide-react";
+import Link from "next/link";
 
 const ServicesPage = () => {
   const services = [
@@ -99,7 +100,7 @@ const ServicesPage = () => {
       </div>
 
       {/* Why Choose Us Section */}
-      <div className="mt-20 text-center bg-blue-50 rounded-2xl p-12">
+      <div className="mt-20 text-center bg-blue-50 rounded-2xl p-12 flex flex-col items-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
           Why choose Feat Books?
         </h2>
@@ -109,9 +110,12 @@ const ServicesPage = () => {
           professional team is here to support every step of your journey,
           ensuring your vision is realized and celebrated.
         </p>
-        <button className="mt-8 bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+        <Link
+          href="/#contact"
+          className="mt-10 bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
           Get Started Today
-        </button>
+        </Link>
       </div>
     </div>
   );

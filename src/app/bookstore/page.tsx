@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import BookCard from "../components/bookCard/BookCard";
 import { books } from "./staticData";
@@ -9,7 +9,7 @@ const allGenres = Array.from(
   new Set(books.flatMap((book) => book.genre))
 ).sort();
 
-const BookStore = () => {
+const BookStoreContent = () => {
   const searchParams = useSearchParams();
   const [wishlist, setWishlist] = React.useState<number[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -117,6 +117,14 @@ const BookStore = () => {
         </button>
       )}
     </div>
+  );
+};
+
+const BookStore = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BookStoreContent />
+    </Suspense>
   );
 };
 
