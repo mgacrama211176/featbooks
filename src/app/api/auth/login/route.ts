@@ -20,7 +20,7 @@ export async function POST(request: Request) {
     const userCredential = await signInWithEmailAndPassword(
       auth,
       email,
-      password
+      password,
     );
 
     const user = userCredential.user as FirebaseUser;
@@ -49,7 +49,7 @@ export async function POST(request: Request) {
   } catch (error) {
     return NextResponse.json(
       { error: "Incorrect Email or Password! Please try again." },
-      { status: 401 }
+      { status: 401 },
     );
   }
 }
